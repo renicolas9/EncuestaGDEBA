@@ -1,0 +1,419 @@
+color_principal = #009aae; //#99CC00;
+color_secundario = #00b0c7;
+color_principal_hover = #08C2C7;
+color_fuente = #404142;//372f2b 2E2E2E
+color_fuente_2 = #8a8d93;
+color_fondo = #F1F8F0;
+color_gris_claro = #E1E1E1;
+color_error = #DF2608;
+
+body
+	//font-family 'Quattrocento Sans',Tahoma,sans-serif
+	font-family 'EncodeSans', sans-serif
+	color color_fuente
+	position relative
+	//background #F6F6F6 url('../img/fondo.png') //position repeat
+	//font-size 1.1em
+	header
+		//box-shadow: 0 2px 4px rgba(0,0,0,0.075), 0 10px 0 rgba(0,0,0,0.01);
+		//margin auto
+		background-color color_principal
+		z-index 11
+		padding 0.3em 0
+		position relative
+		box-shadow: 0 3px 4px rgba(0,0,0,0.075), 0 10px 0 rgba(0,0,0,0.01);
+		//div
+			//text-align center
+			//margin 0 auto
+	main
+		z-index 1
+		background color_fondo url('../img/fondo.png')
+		background-position -500px -50px
+		//height 600px 
+		padding-top 3em
+		form 
+			margin 0 auto
+			text-align center
+			fieldset
+				border 1px solid #eaeaea
+				legend
+					font-size 14px
+					font-weight bold
+					color color_fuente
+					box-sizing border-box
+			label
+				color color_fuente_2
+				font-weight bold
+				&.soft
+					color color_fuente_2
+			input
+				&.btn-encuesta
+					margin 5px 5px 10px 0
+				    background-color #444 !important
+				    border none
+				    box-shadow none
+				    color #fff
+				    padding 12px 20px
+				    text-transform uppercase
+				    text-align center
+				    border-radius 3px
+
+
+h4
+	text-align center
+	color color_fuente
+	font-size 20px
+	line-height 120%
+	padding 20px 0 10px 0
+	margin 0
+	// margin 20px 0 10px 0
+	
+div.container
+	width 1200px
+	margin 0 auto
+	
+div.banner
+	position relative
+	background-color #F0F0F0
+	z-index 5
+	box-shadow: 0 1px 2px rgba(0,0,0,0.075), 0 3px 0 rgba(0,0,0,0.01);
+	//box-shadow: 10px 5px 5px black;
+	//box-shadow: 60px 16px teal;
+	
+div.caracteres
+	text-align right
+	p
+		color color_fuente_2
+
+		
+.checked
+	color orange
+	
+
+section
+	margin-bottom 3.5em
+	div
+		margin 0
+		padding 0
+		display inline-block
+		//overflow hidden
+		&:left
+			float left
+		&:right
+			float right
+		ul.sortable.list
+			li
+				padding 1.65em 1em
+				margin 0.25em
+				box-shadow 0px 0px 1px 1px color_principal
+				position relative
+				//border 1px solid #42729A
+				// background-color #EEF7FC
+				p
+					color color_principal
+					text-align center
+					vertical-align middle
+					margin 0
+					padding 0
+					margin-top -1.75em
+					font-weight bold
+					display inline-block
+					font-size 0.95em
+				img
+					width 20px
+					height 20px
+					display inline-block
+					position absolute
+					left 8px
+					top 17px
+				&:hover
+					cursor pointer
+		ul.numeracion
+			margin 0.5em
+			padding 0
+			position relative
+			li
+				position absolute
+				list-style none
+				&:nth-child(1)
+					top -314px
+					right 0px
+				&:nth-child(2)
+					top -257px
+					right -1px
+				&:nth-child(3)
+					top -200px
+					right -1px
+				&:nth-child(4)
+					top -143px
+					right -1px
+				&:nth-child(5)
+					top -86px
+					right -1px
+				&:nth-child(6)
+					top -29px
+					right -1px
+				p
+					color color_principal
+					text-align center
+					vertical-align middle
+					margin 0
+					padding 0
+					//margin-top -1.75em
+					font-weight bold
+					display inline-block
+					font-size 0.95em
+					height 18px
+					line-height 18px
+  					
+
+@font-face {
+	font-family: EncodeSans;
+	src: url('../fonts/EncodeSans-Regular.ttf');
+	font-weight: normal;
+}
+@font-face {
+	font-family: EncodeSans;
+	src: url('../fonts/EncodeSans-Medium.ttf');
+	font-weight: bold;
+}
+
+
+
+/* Rating Star Widgets Style */
+.rating-stars ul {
+  list-style-type:none;
+  padding:0;
+  
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+.rating-stars ul > li.star {
+  display:inline-block;
+  
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+  font-size:2.5em; /* Change the size of the stars */
+  color:#ccc; /* Color on idle state */
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+  color:#FFCC36;
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+  color:#FF912C;
+}
+/* Rating Star Widgets Style */
+
+
+/*** LOADER ***/
+div.back-loading
+	width 100%
+	height 100%
+	background-color rgba(255,255,255,0.7)
+	display block
+	z-index 9000
+	position absolute
+	.loading 
+		width 400px
+		height 210px
+		padding 2.5em 2em 2em 2em
+		text-align center
+		background-color #EEF7FC
+		box-shadow 0px 0px 2px 0px color_principal
+		margin auto
+		z-index 99
+		position relative
+		top 50%
+		transform translateY(-50%)
+		p
+			color color_principal
+
+#img-successWS,
+#img-errorWS
+	width 64px
+	height 64px
+	margin-bottom 1.1em
+	margin-top 1.1em
+
+#encabezado,
+#responseWS
+	margin 0
+	padding 0
+
+#close-screen
+	position absolute
+	left 388px
+	top -14px
+	z-index 90001
+	img
+		width 20px
+		height 20px
+	
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.lds-default {
+  color black
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 0.6em;
+  margin-top: 0.7em;
+}
+.lds-default div {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: color_principal;
+  border-radius: 50%;
+  animation: lds-default 1.2s linear infinite;
+}
+.lds-default div:nth-child(1) {
+  animation-delay: 0s;
+  top: 29px;
+  left: 53px;
+}
+.lds-default div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 18px;
+  left: 50px;
+}
+.lds-default div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 9px;
+  left: 41px;
+}
+.lds-default div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 6px;
+  left: 29px;
+}
+.lds-default div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 9px;
+  left: 18px;
+}
+.lds-default div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 18px;
+  left: 9px;
+}
+.lds-default div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 29px;
+  left: 6px;
+}
+.lds-default div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 41px;
+  left: 9px;
+}
+.lds-default div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 50px;
+  left: 18px;
+}
+.lds-default div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 53px;
+  left: 29px;
+}
+.lds-default div:nth-child(11) {
+  animation-delay: -1s;
+  top: 50px;
+  left: 41px;
+}
+.lds-default div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 41px;
+  left: 50px;
+}
+@keyframes lds-default {
+  0%, 20%, 80%, 100% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(2);
+  }
+}
+
+
+
+
+
+.connected, .sortable, .exclude, .handles {
+	margin: auto;
+	padding: 0;
+	width: 310px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.sortable.grid {
+	overflow: hidden;
+}
+.connected li, .sortable li, .exclude li, .handles li {
+	list-style: none;
+	/*border: 1px solid #CCC;
+	background: #F6F6F6;
+	font-family: "Tahoma";
+	color: #1C94C4;*/
+	margin: 5px;
+	padding: 5px;
+	height: 22px;
+}
+.handles span {
+	cursor: move;
+}
+li.disabled {
+	opacity: 0.5;
+}
+.sortable.grid li {
+	line-height: 80px;
+	float: left;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+}
+li.highlight {
+	background: #FEE25F;
+}
+#connected {
+	width: 440px;
+	overflow: hidden;
+	margin: auto;
+}
+.connected {
+	float: left;
+	width: 200px;
+}
+.connected.no2 {
+	float: right;
+}
+li.sortable-placeholder {
+	border: 1px dashed #CCC;
+	background: none;
+}
