@@ -1,7 +1,20 @@
-<form id="form-encuesta">
-	<fieldset>
-		<legend>Responda las siguientes preguntas:</legend>
+<?php include('forms/form_encabezado.php'); ?>
 
+<form id="form-encuesta">
+	<!--<fieldset>
+		<legend>Responda las siguientes preguntas:</legend>-->
+
+
+	<?php 
+		//include("forms/paso_1.php");
+		//include("forms/paso_2.php");
+		include("forms/paso_3.php");
+	 ?>
+		
+
+
+
+		<div style="display:none;">
 
 		<label class="soft"><small>Pregunta 1</small></label><br>
 		<label>¿Que tan conforme esta con GDEBA?</label><br><br>
@@ -80,9 +93,9 @@
 		<textarea name="" id="2" cols="30" rows="5" class="form-control respuesta" placeholder="Ingrese su respuesta" maxlength="250" onkeydown="contarCaracteres(this.id)" onkeyup="contarCaracteres(this.id)" onblur="contarCaracteres(this.id)"></textarea>
 		<div class="caracteres"><p><small>0 / 250</small></p></div><br><br>
 		
+		
 
-
-
+		<!--
 		<section>
 				<label class="soft"><small>Pregunta 4</small></label><br>
 				<label>Ordene prioridades: Mejoras</label><br>
@@ -108,6 +121,7 @@
 					</ul>
 				</div>
 		</section>
+		-->
 
  
 		<label class="soft"><small>Pregunta 5</small></label><br>
@@ -116,10 +130,12 @@
 		<textarea name="" id="3" cols="30" rows="7" class="form-control respuesta-libre" placeholder="Ingrese su respuesta" maxlength="2500" onkeydown="contarCaracteres2500()" onkeyup="contarCaracteres2500()" onblur="contarCaracteres2500()"></textarea>
 		<div class="caracteres caracteres-libre"><p><small>0 / 2500</small></p></div><br><br> 
 
-
+		
 
 		<input type="submit" value="Enviar" class="btn-encuesta">
-	</fieldset>
+
+		</div>
+	<!--</fieldset>-->
 </form>
 
 

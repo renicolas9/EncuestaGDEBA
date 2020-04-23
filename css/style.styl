@@ -1,11 +1,16 @@
-color_principal = #009aae; //#99CC00;
+color_principal = #009aae; //#99CC00; //#00AEC3
 color_secundario = #00b0c7;
 color_principal_hover = #08C2C7;
-color_fuente = #404142;//372f2b 2E2E2E
-color_fuente_2 = #8a8d93;
+//color_fuente = #404142;//372f2b 2E2E2E
+color_fuente = #000000;
+color_fuente_2 = #000000; //#8a8d93;
 color_fondo = #F1F8F0;
 color_gris_claro = #E1E1E1;
 color_error = #DF2608;
+
+color_celeste = #00AEC3;
+color_celeste_soft = #2ACFE3;
+color_gris = #838383;
 
 body
 	//font-family 'Quattrocento Sans',Tahoma,sans-serif
@@ -17,7 +22,7 @@ body
 	header
 		//box-shadow: 0 2px 4px rgba(0,0,0,0.075), 0 10px 0 rgba(0,0,0,0.01);
 		//margin auto
-		background-color color_principal
+		background-color color_celeste
 		z-index 11
 		padding 0.3em 0
 		position relative
@@ -27,11 +32,12 @@ body
 			//margin 0 auto
 	main
 		z-index 1
-		background color_fondo url('../img/fondo.png')
-		background-position -500px -50px
-		//height 600px 
+		background-image url('../img/background.png')
+		background-repeat no-repeat
+		background-size 100%
 		padding-top 3em
 		form 
+			//background-color white
 			margin 0 auto
 			text-align center
 			fieldset
@@ -57,7 +63,154 @@ body
 				    text-transform uppercase
 				    text-align center
 				    border-radius 3px
+				    
 
+div.container-form
+	width 800px
+	margin 0 auto
+	background-color rgba(255, 255, 255, .4)
+	padding 1em 2.2em 3.45em 2.2em
+	border-radius 18px
+	margin-bottom 10em
+	
+div.encabezado-form
+	padding 1em 0 0 0 
+	text-align center
+	position relative
+	img.check
+		position absolute
+		top -50px
+		left 344px
+		width 54px
+	div.encabezado-form-p
+		p
+			margin 0
+			padding 0
+			&:nth-child(1)
+				font-weight bold
+				font-size 1.25em
+			&:nth-child(2)
+				font-size 1.1em
+	div#encabezado-estado
+		margin 1em
+		padding 0 2em
+		div.sep
+			border-top 3px solid color_gris
+			border-bottom 3px solid color_gris
+			padding 1.2em
+			div.encabezado-1
+				p
+					font-weight bold
+					font-size 1.1em
+					display inline-block
+					margin-right 0.2em
+			div.encabezado-2,
+			div.encabezado-3,
+			div.encabezado-4,
+			div.encabezado-5
+				padding 0.5em 0em 2em 0em
+
+
+			
+div.paso
+	padding 2em 0
+	position relative
+	//background-color #ccc
+					
+div.paso-descripcion
+	//margin-top 1em
+	font-weight bold
+	font-size 1.30em
+	p
+		color color_celeste
+		span
+			color white
+			background-color color_celeste
+			padding 1px 10px 2px 9px
+			border-radius 3px
+			margin-right 0.4em
+
+div.paso-inputs
+	text-align left
+	margin 0 auto
+	padding-left 35px
+	width 450px
+	&.xl
+		width 700px
+	div.section-input
+		margin-top 2em
+		label
+			&.subtitle
+				span
+					font-size 1.4em
+					margin-right 0.2em
+			&.subtitle-2
+				margin-top 1em
+				//margin-bottom -0.51em
+				color color_celeste
+				font-size 1.1em
+			&.subtitle-3
+				font-size 0.9em
+				margin-top 1.5em
+		select
+			border-radius 4px
+			height 30px
+			width 250px
+			&:focus
+				border 1px solid color_celeste_soft
+				
+
+input.datalist
+	border-radius 4px
+	height 35px
+	width 250px 
+	background-color white !important
+	text-transform capitalize
+	border 1px solid color_celeste
+	color black
+	&:focus
+		border 2px solid color_celeste
+		
+
+div.section-input-boton
+	position relative
+	div.abs
+		position absolute
+		left 325px
+		top 120px
+		div
+			text-align center
+			position relative
+			img
+				width 75px
+				position absolute
+				top -62px
+			button
+				width 75px
+				height 30px
+				color white
+				font-weight bold
+				font-size 0.85em
+				background-color color_celeste
+				border none
+				border-radius 4px
+				&:hover
+					background-color color_celeste_soft
+	
+div.options-left,
+div.options-right
+	vertical-align top
+	width 100px
+	display inline-block
+	&.xl
+		width 280px
+		//text-align justify
+		label
+			margin-bottom 0.8em
+	input 
+		margin-right 0.5em
+div.options-right
+	margin-left 3em
 
 h4
 	text-align center
@@ -67,10 +220,23 @@ h4
 	padding 20px 0 10px 0
 	margin 0
 	// margin 20px 0 10px 0
+		
+span.text-option
+	font-weight normal
+	font-size 18px
+
+span.text-checkbox
+	font-weight normal
+	font-size 18px
+	&.small
+		font-size 15px
 	
+
 div.container
 	width 1200px
 	margin 0 auto
+	
+
 	
 div.banner
 	position relative
@@ -84,6 +250,7 @@ div.caracteres
 	text-align right
 	p
 		color color_fuente_2
+		margin 0
 
 		
 .checked
@@ -166,15 +333,20 @@ section
 					height 18px
 					line-height 18px
   					
-
+/*
 @font-face {
 	font-family: EncodeSans;
 	src: url('../fonts/EncodeSans-Regular.ttf');
 	font-weight: normal;
-}
+}*/
 @font-face {
 	font-family: EncodeSans;
 	src: url('../fonts/EncodeSans-Medium.ttf');
+	font-weight: normal;
+}
+@font-face {
+	font-family: EncodeSans;
+	src: url('../fonts/EncodeSans-Bold.ttf');
 	font-weight: bold;
 }
 
@@ -184,6 +356,7 @@ section
 .rating-stars ul {
   list-style-type:none;
   padding:0;
+  margin-top 1.0em
   
   -moz-user-select:none;
   -webkit-user-select:none;
@@ -196,17 +369,17 @@ section
 /* Idle State of the stars */
 .rating-stars ul > li.star > i.fa {
   font-size:2.5em; /* Change the size of the stars */
-  color:#ccc; /* Color on idle state */
+  color:color_gris; /* Color on idle state */
 }
 
 /* Hover state of the stars */
 .rating-stars ul > li.star.hover > i.fa {
-  color:#FFCC36;
+  color:color_celeste_soft;//#FFCC36;
 }
 
 /* Selected state of the stars */
 .rating-stars ul > li.star.selected > i.fa {
-  color:#FF912C;
+  color:color_celeste;//#FF912C;
 }
 /* Rating Star Widgets Style */
 
@@ -416,4 +589,150 @@ li.highlight {
 li.sortable-placeholder {
 	border: 1px dashed #CCC;
 	background: none;
+}
+
+
+
+
+
+/* Customize the label (the container) */
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  font-size: 19px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 7px;
+  left: 3px;
+  height: 17px;
+  width: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  border 2px solid color_celeste
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input ~ .checkmark {
+  background-color: #EEEDED;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark {
+ // background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radio .checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: black;
+}
+
+
+
+
+
+
+/* Customize the label (the container) */
+.container-checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 19px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark-checkbox {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border 2px solid color_celeste
+  border-radius 5px
+}
+
+/* On mouse-over, add a grey background color */
+.container-checkbox:hover input ~ .checkmark-checkbox {
+  background-color: #EEEDED;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark-checkbox {
+  //background-color: #2196F3;
+}
+
+/* Create the checkmark-checkbox/indicator (hidden when not checked) */
+.checkmark-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark-checkbox when checked */
+.container-checkbox input:checked ~ .checkmark-checkbox:after {
+  display: block;
+}
+
+/* Style the checkmark-checkbox/indicator */
+.container-checkbox .checkmark-checkbox:after {
+  left: 5px;
+  top: 2px;
+  width: 7px;
+  height: 10px;
+  border: 1px solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

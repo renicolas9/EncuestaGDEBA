@@ -1,5 +1,5 @@
 <?php 
-include('config/conexion_bd.php');
+//include('config/conexion_bd.php');
 
 ?>
 
@@ -43,7 +43,11 @@ include('config/conexion_bd.php');
 
 		<main>
 			<div class="container">
-				<?php include('forms/form_encuesta.php'); ?>
+				<div class="container-form">
+
+					<?php include('forms/form_encuesta.php'); ?>
+				</div>
+				
 			</div>
 			
 		
