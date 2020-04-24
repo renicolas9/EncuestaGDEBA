@@ -27,6 +27,65 @@ function inicio() {
 	});
 
 
+	$('#paso-1').show();
+	$('#paso-2').hide();
+	$('#paso-3').hide();
+	$('#paso-4').hide();
+	$('#paso-5').hide();
+
+	$('.encabezado-1').show();
+	$('.encabezado-2').hide();
+	$('.encabezado-3').hide();
+	$('.encabezado-4').hide();
+	$('.encabezado-5').hide();
+
+
+	$('#paso-1 button.btn-sig').on('click',function(ev){
+		ev.preventDefault();
+		$('#paso-1').slideToggle();
+		$('#paso-2').slideToggle();
+
+		$('.encabezado-1').fadeOut(2);
+		$('.encabezado-2').fadeIn("fast");
+		/*$("html, body").animate({
+		    scrollTop: 0
+		}, 2000);*/
+	});
+
+	$('#paso-2 button.btn-sig').on('click',function(ev){
+		ev.preventDefault();
+		$('#paso-2').slideToggle();
+		$('#paso-3').slideToggle();
+
+		$('.encabezado-2').fadeOut(2);
+		$('.encabezado-3').fadeIn("fast");
+	});
+
+	$('#paso-3 button.btn-sig').on('click',function(ev){
+		ev.preventDefault();
+		$('#paso-3').slideToggle();
+		$('#paso-4').slideToggle();
+
+		$('.encabezado-3').fadeOut(2);
+		$('.encabezado-4').fadeIn("fast");
+	});
+
+	$('#paso-4 button.btn-sig').on('click',function(ev){
+		ev.preventDefault();
+		$('#paso-4').slideToggle();
+		$('#paso-5').slideToggle();
+
+		$('.encabezado-4').fadeOut(2);
+		$('.encabezado-5').fadeIn("fast");
+	});
+
+
+
+
+	
+
+
+
 
 /*************  CALIF BAR *********************/
  /* 1. Visualizing things on Hover - See next part for action on click */
@@ -154,8 +213,6 @@ $.fn.sortable = function(options) {
 		});
 	});
 };
-
-
 /*********** SORTABLE LIST END **************/
 
 }
@@ -386,6 +443,18 @@ function contarCaracteres2500(resp){
 	var caracteresSelect = p_caracteres[resp];
 	$(p_caracteres).empty()[resp];
 	$(p_caracteres).append(log)[resp];
+}
+
+
+function textareaOtra(inputID){
+	var nroCheck = inputID;
+	console.log(nroCheck);
+	var idTA = nroCheck.split("otra-");
+	console.log(idTA);
+	var selectTA = 'textarea#'+idTA;
+	console.log(selectTA);
+
+	$(selectTA).show();
 }
 
 

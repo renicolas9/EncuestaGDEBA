@@ -1,4 +1,4 @@
-<div class="paso">
+<div class="paso" id="paso-2">
 		<div class="paso-descripcion">
 			<p><span>2</span>INTRODUCCIÓN A GDEBA</p>
 
@@ -137,7 +137,7 @@
 			<div class="abs">
 				<div>
 				<img src="img/flechas.png">
-				<button>Continuar</button>
+				<button class="btn-sig">Continuar</button>
 				</div>
 			</div>
 		</div>

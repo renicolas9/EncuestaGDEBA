@@ -1,4 +1,4 @@
-<div class="paso">
+<div class="paso" id="paso-1">
 		<div class="paso-descripcion">
 			<p><span>1</span>INFORMACIÓN DEL ENCUESTADO</p>
 
@@ -55,7 +55,7 @@
 			<div class="abs">
 				<div>
 				<img src="img/flechas.png">
-				<button>Continuar</button>
+				<button class="btn-sig">Continuar</button>
 				</div>
 			</div>
 		</div>

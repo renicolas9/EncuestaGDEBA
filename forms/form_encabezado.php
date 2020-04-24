@@ -9,10 +9,6 @@
 
 	<div id="encabezado-estado">
 		<div class="sep">
-			<div class="encabezado-2">
-				<img src="img/barra30.png">
-			</div>
-			<!--
 			<div class="encabezado-1">
 				<p>Tiempo estimado: </p>
 				<img src="img/reloj.png">
@@ -30,8 +26,6 @@
 			<div class="encabezado-5">
 				<img src="img/barra100.png">
 			</div>
-			-->
-			
 		</div>
 	</div>
 </div>
