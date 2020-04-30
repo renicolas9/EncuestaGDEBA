@@ -42,49 +42,66 @@ function inicio() {
 
 	$('#paso-1 button.btn-sig').on('click',function(ev){
 		ev.preventDefault();
-		$('#paso-1').slideToggle();
-		$('#paso-2').slideToggle();
+		//$('#paso-1').slideToggle();
+		//$('#paso-2').slideToggle();
+		$('#paso-1').fadeOut(2);
+		$('#paso-2').fadeIn("slow");
 
 		$('.encabezado-1').fadeOut(2);
 		$('.encabezado-2').fadeIn("fast");
-		/*$("html, body").animate({
+		$("html, body").animate({
 		    scrollTop: 0
-		}, 2000);*/
+		}, 350);
 	});
 
 	$('#paso-2 button.btn-sig').on('click',function(ev){
 		ev.preventDefault();
-		$('#paso-2').slideToggle();
-		$('#paso-3').slideToggle();
+		$('#paso-2').fadeOut(2);
+		$('#paso-3').fadeIn("slow");
 
 		$('.encabezado-2').fadeOut(2);
 		$('.encabezado-3').fadeIn("fast");
+
+		$("html, body").animate({
+		    scrollTop: 0
+		}, 350);
 	});
 
 	$('#paso-3 button.btn-sig').on('click',function(ev){
 		ev.preventDefault();
-		$('#paso-3').slideToggle();
-		$('#paso-4').slideToggle();
+		$('#paso-3').fadeOut(2);
+		$('#paso-4').fadeIn("slow");
 
 		$('.encabezado-3').fadeOut(2);
 		$('.encabezado-4').fadeIn("fast");
+		$("html, body").animate({
+		    scrollTop: 0
+		}, 350);
+		
 	});
 
 	$('#paso-4 button.btn-sig').on('click',function(ev){
 		ev.preventDefault();
-		$('#paso-4').slideToggle();
-		$('#paso-5').slideToggle();
+		$('#paso-4').fadeOut(2);
+		$('#paso-5').fadeIn("slow");
 
 		$('.encabezado-4').fadeOut(2);
 		$('.encabezado-5').fadeIn("fast");
+		$("html, body").animate({
+		    scrollTop: 0
+		}, 350);
+		
 	});
 
 
 
-
-	
-
-
+	$('.ta-control').click(function(e){
+		//e.stopPropagation();
+		e.preventDefault();
+		//$('#children').click(function(e) {e.stopPropagation()});
+		var ID = $(this).attr('id');
+		textareaOtra(ID);
+	});
 
 
 /*************  CALIF BAR *********************/
@@ -448,13 +465,25 @@ function contarCaracteres2500(resp){
 
 function textareaOtra(inputID){
 	var nroCheck = inputID;
-	console.log(nroCheck);
-	var idTA = nroCheck.split("otra-");
-	console.log(idTA);
-	var selectTA = 'textarea#'+idTA;
-	console.log(selectTA);
 
-	$(selectTA).show();
+	var i = "#"+nroCheck+" input";
+	var checkbox = $(i);
+
+	var idTA = nroCheck.split("otra-");
+	var selectTA = '#divTA-'+idTA[1];
+
+	var TAClean = '#divTA-'+idTA[1]+" textarea";
+	$(TAClean).val("");
+
+	if ( $(selectTA).css('display') != 'none' ){
+		console.log("visible");
+		$(selectTA).css("display","none");
+		$(checkbox).prop("checked", false);
+	} else {
+		$(selectTA).css("display","block");
+		console.log("invisible");
+		$(checkbox).prop("checked", true);
+	}
 }
 
 

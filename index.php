@@ -41,16 +41,14 @@
 			<!-- </div> -->
 		</div>
 
-		<main>
-			<div class="container">
-				<div class="container-form">
-
-					<?php include('forms/form_encuesta.php'); ?>
+		<div class="background">
+			<main>	
+				<div class="container">
+					<div class="container-form">
+						<?php include('forms/form_encuesta.php'); ?>
+					</div>
 				</div>
-				
-			</div>
-			
-		
-		</main>
+			</main>
+		</div>
 	</body>
 </html>

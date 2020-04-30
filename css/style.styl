@@ -30,11 +30,18 @@ body
 		//div
 			//text-align center
 			//margin 0 auto
+	div.background
+		background-image url('../img/background_superior.png'), url('../img/background_inferior.png')
+		background-position top right, bottom -1.5em left
+		background-repeat no-repeat
+		background-size 60%
+		height 100%		
+		padding-bottom 0.5em
 	main
 		z-index 1
-		background-image url('../img/background.png')
-		background-repeat no-repeat
-		background-size 100%
+		position relative
+		//background-image url('../img/background.png')
+		//background-size 100%
 		padding-top 3em
 		form 
 			//background-color white
@@ -64,11 +71,29 @@ body
 				    text-align center
 				    border-radius 3px
 				    
+/*
+div.bg-start-parent
+	margin 0
+	padding 0
+	margin-top -1.5em
+	position relative	
+	height 500px
+
+div.bg-start
+	height 100px
+	//height 500px
+	margin-top -1.5em
+	background-image url('../img/background_superior.png')
+	background-repeat no-repeat
+	background-position right
+	//background-size 100%
+	overflow-y visible
+*/
 
 div.container-form
 	width 800px
 	margin 0 auto
-	background-color rgba(255, 255, 255, .4)
+	background-color rgba(255, 255, 255, .65)
 	padding 1em 2.2em 3.45em 2.2em
 	border-radius 18px
 	margin-bottom 10em
@@ -248,6 +273,7 @@ span.text-option
 span.text-checkbox
 	font-weight normal
 	font-size 18px
+	vertical-align top
 	&.small
 		font-size 15px
 	
@@ -255,6 +281,9 @@ span.text-checkbox
 div.container
 	width 1200px
 	margin 0 auto
+	
+div.div-textareas
+	display none
 	
 textarea.respuesta
 	margin 0 auto
