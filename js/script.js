@@ -1,6 +1,9 @@
 $(document).ready(inicio);
-
+	
 function inicio() {
+
+	modulosCheck = [];
+
 	$('#form-encuesta').submit(function(ev){
 		ev.preventDefault();
 		var respuestas = guardarRespuestas();
@@ -56,11 +59,41 @@ function inicio() {
 
 	$('#paso-2 button.btn-sig').on('click',function(ev){
 		ev.preventDefault();
+
+		//obtener checks modulos
+		$("input:checkbox[name=modulos-utilizados]:checked").each(function(){
+		    modulosCheck.push($(this).val());
+		});
+		//console.log(modulosCheck);
+
 		$('#paso-2').fadeOut(2);
 		$('#paso-3').fadeIn("slow");
 
 		$('.encabezado-2').fadeOut(2);
 		$('.encabezado-3').fadeIn("fast");
+
+		//console.log(modulosCheck.lenght);
+		//console.log(modulosCheck[0]);
+
+
+		for (var i = 0; i < modulosCheck.length; i++) {
+			switch (modulosCheck[i]) { 
+				case 'EE': 
+					$('#module-ee').show();
+					console.log('EE');
+					break;
+				case 'CCOO': 
+					$('#module-ccoo').show();
+					console.log('CCOO');
+					break;
+				case 'GEDO': 
+					$('#module-gedo').show();
+					console.log('GEDO');
+					break;
+				default:
+					console.log('');
+			}
+		}
 
 		$("html, body").animate({
 		    scrollTop: 0
@@ -420,6 +453,30 @@ function contarCaracteres(resp){
 	var respuestaWrite = $(respuestaSelect).val();
 	//console.log(respuestaWrite);
 	var permitidos = 250;
+	//var ingresadosSelect = respInputs[resp];//.val().length
+	var caracteresIngresados = $(respuestaSelect).val().length;
+	//console.log('ingresados: '+caracteresIngresados);
+	if(caracteresIngresados > permitidos){
+		var newR = bio.substr(0,permitidos);
+		$('.respuesta').val(newR);
+		var caracteresIngresados = $('.respuesta').val().length;
+	}
+	var log = "<p><small>"+caracteresIngresados + " / " + permitidos+"</small></p>";
+	//var caracteresRespuesta = '.caracteres-'+resp;
+	//console.log($('.caracteres')[resp]);
+	var p_caracteres = $('.caracteres');
+	var caracteresSelect = p_caracteres[resp];
+	$(caracteresSelect).empty()[resp];
+	$(caracteresSelect).append(log)[resp];
+}
+
+function contarCaracteres500(resp){
+	//console.log($('.respuesta').val(resp));
+	var respInputs = $('.respuesta');
+	var respuestaSelect = respInputs[resp];
+	var respuestaWrite = $(respuestaSelect).val();
+	//console.log(respuestaWrite);
+	var permitidos = 500;
 	//var ingresadosSelect = respInputs[resp];//.val().length
 	var caracteresIngresados = $(respuestaSelect).val().length;
 	//console.log('ingresados: '+caracteresIngresados);

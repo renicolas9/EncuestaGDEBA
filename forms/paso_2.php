@@ -40,21 +40,17 @@
 				<div>
 					<div>
 						<div>
-							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="0-5"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">GEDO</span></label>
-							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="6-10"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">EE</span></label>
-							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="11-15"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">CCOO</span></label>
-							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="21-25"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">RLM</span></label>
+							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="GEDO"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">GEDO</span></label>
+							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="EE"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">EE</span></label>
+							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="CCOO"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">CCOO</span></label>
+							<label class="container-checkbox"><input type="checkbox" name="modulos-utilizados" value="RLM"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox">RLM</span></label>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="section-input">
-				<label class="subtitle">D) ????????</label>
-			</div>
-
-			<div class="section-input">
-				<label class="subtitle">E) ¿QUÉ TAN CONFORME SE ENCUENTRA CON GDEBA?<br><small>1 estrella: nada conforme / 5 estrellas: muy conforme.</small></label>
+				<label class="subtitle">D) ¿QUÉ TAN CONFORME SE ENCUENTRA CON GDEBA?<br><small>1 estrella: nada conforme / 5 estrellas: muy conforme.</small></label>
 				<div>
 					<div class='rating-stars text-center'>
 					    <ul id='stars'>
@@ -79,7 +75,7 @@
 			</div>
  
  			<div class="section-input">
-				<label class="subtitle">F) ¿CÓMO EVALUARÍA LOS SIGUIENTES ASPECTOS DE GDEBA?</label>
+				<label class="subtitle">E) ¿CÓMO EVALUARÍA LOS SIGUIENTES ASPECTOS DE GDEBA?</label>
 				<label class="subtitle-2">.Visualización, comprensión y facilidad de uso <small style="color:black;display: block;">Seleccione 1 opción.</small></label>
 				<div>
 					<div>
@@ -87,11 +83,11 @@
 						<div>
 							<div class="options-left" style="width: 150px;">
 							<label class="container-radio"><input type="Radio" name="dificultad" value="0-5"/> <span class="checkmark"></span> <span class="text-option">Muy fácil</span></label>
-							<label class="container-radio"><input type="Radio" name="dificultad" value="6-10"/> <span class="checkmark"></span> <span class="text-option">Difícil</span></label>
+							<label class="container-radio"><input type="Radio" name="dificultad" value="6-10"/> <span class="checkmark"></span> <span class="text-option">Fácil</span></label>
 						</div>
 
 						<div class="options-right" style="width: 180px;">
-							<label class="container-radio"><input type="Radio" name="dificultad" value="21-25"/> <span class="checkmark"></span> <span class="text-option">Fácil</span></label>
+							<label class="container-radio"><input type="Radio" name="dificultad" value="21-25"/> <span class="checkmark"></span> <span class="text-option">Difícil</span></label>
 							<label class="container-radio"><input type="Radio" name="dificultad" value="26-30"/> <span class="checkmark"></span> <span class="text-option">Muy difícil</span> </label>
 						</div>
 						</div>
@@ -117,11 +113,11 @@
 						<div>
 							<div class="options-left" style="width: 150px;">
 							<label class="container-radio"><input type="Radio" name="comprension" value="0-5"/> <span class="checkmark"></span> <span class="text-option">Muy claro</span></label>
-							<label class="container-radio"><input type="Radio" name="comprension" value="6-10"/> <span class="checkmark"></span> <span class="text-option">Poco claro</span></label>
+							<label class="container-radio"><input type="Radio" name="comprension" value="6-10"/> <span class="checkmark"></span> <span class="text-option">Claro</span></label>
 						</div>
 
 						<div class="options-right" style="width: 180px;">
-							<label class="container-radio"><input type="Radio" name="comprension" value="21-25"/> <span class="checkmark"></span> <span class="text-option">Claro</span></label>
+							<label class="container-radio"><input type="Radio" name="comprension" value="21-25"/> <span class="checkmark"></span> <span class="text-option">Poco claro</span></label>
 							<label class="container-radio"><input type="Radio" name="comprension" value="26-30"/> <span class="checkmark"></span> <span class="text-option">Ininteligible</span> </label>
 						</div>
 						</div>

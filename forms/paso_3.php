@@ -6,10 +6,10 @@
 
 		<div class="paso-inputs xl">
 			
+				<label class="subtitle">A) SELECCIONE: ¿CUÁL/ES DE LAS SIGUIENTES CUESTIONES LIMITAN SU TRABAJO DIARIO?<br><p style="font-size: 0.92em; font-weight: normal;">Puede seleccionar más de una opción.</p></label>
 
-			<div class="section-input">
-				<label class="subtitle">A) SELECCIONE: ¿CUÁL/ES DE LAS SIGUIENTES CUESTIONES LIMITAN SU TRABAJO DIARIO?<br><small>Puede seleccionar más de una opción.</small></label>
-				<label class="subtitle-2">.Expediente Electrónico | EE  <small style="color:black;display: block;">Seleccione 1 opción.</small></label>
+			<div class="section-input" id="module-ee" style="display: none;" style="display: none;">
+				<label class="subtitle-2">.Expediente Electrónico | EE  <!--<small style="color:black;display: block;">Seleccione 1 opción.</small>--></label>
 				<div>
 					<div>
 						<div>
@@ -17,7 +17,7 @@
 								<label class="container-checkbox"><input type="checkbox" name="limitantes" value="0-5"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox small">Dificultad en la búsqueda y seguimiento de expedientes sin N° GDEBA completo.</span></label>
 								<label class="container-checkbox"><input type="checkbox" name="limitantes" value="6-10"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox small">Imposibilidad de quitar el atributo de reserva, a documentos vinculados a un expediente con reserva en tramitación (parcial).</span></label>
 								<label class="container-checkbox"><input type="checkbox" name="limitantes" value="11-15"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox small">Dificultad en la búsqueda de la carátula (trata) apropiada para un expediente.</span></label>
-								<label class="container-checkbox"><input type="checkbox" name="limitantes" value="21-25"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox small">Falla en el inicio de documentos GEDO dentro de un expediente.</span></label>
+								
 								<label class="container-checkbox"><input type="checkbox" name="limitantes" value="21-25"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox small">Falla en la vinculación de documentos generados desde el botón "Iniciar documento GEDO".</span></label>
 								<label class="container-checkbox"><input type="checkbox" name="limitantes" value="21-25"/> <span class="checkmark-checkbox"></span> <span class="text-checkbox small">Imposibilidad de corregir la carátula del expediente, una vez generada.</span></label>
 
@@ -56,7 +56,7 @@
 				</div>
 			</div>
 
-			<div class="section-input">
+			<div class="section-input" id="module-gedo" style="display: none;">
 				<label class="subtitle-2">.Generador Electrónico de Documentos Oficiales | GEDO</label>
 				<div>
 					<div>
@@ -96,7 +96,7 @@
 				</div>
 			</div>
 
-			<div class="section-input">
+			<div class="section-input" id="module-ccoo" style="display: none;">
 				<label class="subtitle-2">.Comunicaciones Oficiales | CCOO</label>
 				<div>
 					<div>
