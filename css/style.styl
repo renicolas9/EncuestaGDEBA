@@ -184,6 +184,41 @@ div.paso-inputs
 			&:focus
 				border 1px solid color_celeste_soft
 				
+div.selection-container
+	margin 0 auto
+	text-align center
+	a.selection-1,
+	a.selection-2
+		//font-family /*'Roboto',*/'Alata'
+		background-image url('../img/fondo-cuadrado-menu.png')
+		background-size 100%
+		//background-position 0 /*-41px*/-64px
+		//padding 2em
+		width 120px
+		height 120px
+		display inline-block
+		//margin-top 45px
+		margin-right 0.75em
+		margin-left 0.75em
+		//margin-left 3em
+		font-size 15px
+		text-decoration none
+		color color_fondo
+		//font-weight bold
+		border-radius 1.25em
+		transition 0.1s all ease
+		padding-top 45px
+	a.selection-1
+		background-color #d5175c
+		&:hover 
+			background-color #E0266A
+			text-shadow 0 0 4px black
+	a.selection-2
+		background-color #2eb88a
+		&:hover 
+			text-shadow 0 0 4px black
+			background-color #36C293
+				
 
 input.datalist
 	border-radius 4px

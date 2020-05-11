@@ -46,6 +46,7 @@
 				<div class="container">
 					<div class="container-form">
 						<?php include('forms/form_encuesta.php'); ?>
+
 					</div>
 				</div>
 			</main>

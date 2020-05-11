@@ -8,14 +8,16 @@
 					<p class="congrats-2">¡Muchas Gracias!</p>
 				</div>
 			</div>
-		</div>
 
-		<!--<div class="section-input-boton">
-			<div class="abs">
-				<div>
-				<img src="img/flechas.png">
-				<button>Continuar</button>
+			<div class="section-input" style="text-align: center; margin-top: 5em;">
+				<label class="subtitle" style="margin-bottom: 1em;">Links útiles</label>
+				<div class="selection-container">
+					<a href="https://www.gdeba.gba.gob.ar/pagina/3" target="_blank" class="selection-1">Capacitaciones</a>
+					<a href="https://www.gdeba.gba.gob.ar/pagina/5" target="_blank" class="selection-2">Manuales</a>
 				</div>
 			</div>
-		</div>-->
+
+		</div>
+
+
 </div>		
